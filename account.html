@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logoepro.png" type="image/png" sizes="150x150">
+    <title>ADDISON | Account</title>
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</head>
+<body>
+
+<!-- formaccount -->
+<section class="login">
+    <div class="container">
+  <div class="row">
+    <div class="col-md-4 login-sec">
+        <h2 class="text-center">Login Now</h2>
+        <form class="login-form">
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+    <input id='name' type="text" class="form-control" placeholder="">
+    <span id='messageErrorName' class="text-danger small d-none">
+      Username invalid
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+    <input id='pass' type="password" class="form-control" placeholder="">
+    <span id='messageErrorPass' class="text-danger small d-none">
+      Password invalid or Password less than 6
+    </span>
+  </div>
+  
+  
+    <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      <small>Remember Me</small>
+    </label>
+    <button onclick="myFunction(1)" type="button" id="button" class="btn btn-login float-right">Submit</button>
+  </div>
+  
+</form>
+<div class="copy-text">Back to home <i class="fa-solid fa-arrow-right-to-bracket"></i> &nbsp;<a href="eprodemo.html">ADDISON.com</a></div>
+    </div>
+    <div class="col-md-8 banner-sec">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                 <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+            <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" src="images/anh6.jpg" alt="First slide" width="730px" height="487px">
+      <div class="carousel-caption d-none d-md-block">
+        
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="images/nhakhoa1.jpg" alt="First slide" width="730px" height="487px">
+      <div class="carousel-caption d-none d-md-block">
+        
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="images/nhkhoa2.jpg" alt="First slide" width="730px" height="487px">
+      <div class="carousel-caption d-none d-md-block">
+          
+    </div>
+  </div>
+            </div>     
+        
+    </div>
+  </div>
+</div>
+</section>         
+<script>
+    function myFunction(a) {
+      var name=document.getElementById("name").value;
+      if(name==''){
+        document.getElementById("messageErrorName").classList.remove('d-none')
+      }
+      else{
+        document.getElementById("messageErrorName").classList.add('d-none')
+      }
+      var pass=document.getElementById("pass").value;
+      if(pass=='' || pass.length < 6){
+        document.getElementById("messageErrorPass").classList.remove('d-none')
+      }
+      else{
+        document.getElementById("messageErrorPass").classList.add('d-none')
+      }
+      if(name!='' && pass!='' && pass.length >= 6){
+        alert('Login Success');
+      }
+
+    }
+</script>
+</body>
+</html>
